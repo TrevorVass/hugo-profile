@@ -18,6 +18,7 @@
         <div class="pr-lg-4">
           <div class="title mb-5">
             <h1 class="text-center mb-4">{{ .Title }}</h1>
+            {{ if (.Params.enableDateAndReadingTime | default false) }}
             <div class="text-center">
               {{ .Params.author }} 
               <small>|</small>
@@ -29,6 +30,7 @@
               </span>
               {{ end }}
             </div>
+            {{ end }}
           </div>
           {{ if .Params.image }}
           <div class="featured-image">
